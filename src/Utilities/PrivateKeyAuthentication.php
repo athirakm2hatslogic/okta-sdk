@@ -5,7 +5,7 @@ namespace Okta\Utilities;
 use Lcobucci\JWT\Signer;
 use Okta\Exceptions\Error;
 use Lcobucci\JWT\Token\Plain;
-use Okta\Cache\MemoryManager;
+// use Okta\Cache\MemoryManager;
 use Lcobucci\JWT\Configuration;
 use Cache\Adapter\Common\CacheItem;
 use Okta\Exceptions\ResourceException;
@@ -51,7 +51,7 @@ class PrivateKeyAuthentication {
 
 
     public function __construct($clientId, $scopes, $privateKey, $orgUrl) {
-        $this->memory = new MemoryManager();
+        // $this->memory = new MemoryManager();
         $this->clientId = $clientId;
         $this->scopes = $scopes;
         $this->privateKey = \Lcobucci\JWT\Signer\Key\InMemory::plainText($privateKey);

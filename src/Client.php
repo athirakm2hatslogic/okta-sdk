@@ -19,7 +19,7 @@ namespace Okta;
 
 use Http\Client\HttpClient;
 use Okta\Cache\CacheManager;
-use Okta\Cache\MemoryManager;
+// use Okta\Cache\MemoryManager;
 use Okta\DataStore\DefaultDataStore;
 use Okta\Utilities\AuthorizationMode;
 
@@ -96,9 +96,9 @@ class Client
             $this->authorizationMode
         );
 
-        if(null === $this->cacheManager) {
-            $this->cacheManager = new MemoryManager();
-        }
+        // if(null === $this->cacheManager) {
+        //     $this->cacheManager = new MemoryManager();
+        // }
 
         self::$instance = $this;
     }
