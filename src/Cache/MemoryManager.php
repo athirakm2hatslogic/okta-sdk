@@ -27,9 +27,9 @@ class MemoryManager extends CacheManager
 
     public function __construct(AbstractAdapter $adapter = null)
     {
-        if(null === $adapter) {
-            $adapter = new MemoryAdapter();
-        }
+        // if(null === $adapter) {
+        //     $adapter = new MemoryAdapter();
+        // }
 
         $this->setCachePool(
             new FilesystemCachePool(
