@@ -17,7 +17,7 @@
 
 namespace Okta\Cache;
 
-use Cache\Adapter\Filesystem\FilesystemCachePool;
+use Cache;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Memory\MemoryAdapter;
@@ -32,7 +32,7 @@ class MemoryManager extends CacheManager
         // }
 
         $this->setCachePool(
-            new FilesystemCachePool(
+            new Cache(
                 new Filesystem(
                     $adapter
                 )
